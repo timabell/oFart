@@ -12,6 +12,8 @@ try:
 except:
 	sys.exit(1)
 
+import dbus
+
 class OFart:
 	def __init__(self):
 		#load glade file
@@ -27,6 +29,11 @@ class OFart:
 	def fart(self,  widget,  container):
 		#todo
 		print "parp"
+		bus = dbus.SystemBus()
+		audio =  bus.get_object("org.freesmartphone.odeviced",  "/org/freesmartphone/Device/Audio")
+		iface = dbus.Interface(audio,  "org.freesmartphone.Device.Audio")
+		iface.PlaySound("/usr/share/oFart/squeek.wav", 0, 3)
+
 
 if __name__ == "__main__":
 	oFart = OFart()
