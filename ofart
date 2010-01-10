@@ -17,7 +17,7 @@ import dbus
 class OFart:
 	def __init__(self):
 		#load glade file
-		self.gladefile="ofart.glade"
+		self.gladefile="/usr/share/ofart/ofart.glade"
 		self.wTree = gtk.glade.XML(self.gladefile,  "mainWindow")
 		#set up main window
 		self.window = self.wTree.get_widget("mainWindow")
@@ -32,7 +32,7 @@ class OFart:
 		bus = dbus.SystemBus()
 		audio =  bus.get_object("org.freesmartphone.odeviced",  "/org/freesmartphone/Device/Audio")
 		iface = dbus.Interface(audio,  "org.freesmartphone.Device.Audio")
-		iface.PlaySound("/usr/share/oFart/squeek.wav", 0, 3)
+		iface.PlaySound("/usr/share/ofart/sounds/squeek.wav", 0, 3)
 
 
 if __name__ == "__main__":

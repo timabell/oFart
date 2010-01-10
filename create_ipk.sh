@@ -11,10 +11,14 @@ fi
 mkdir -p opkgfolder/usr/bin
 mkdir -p opkgfolder/usr/share/applications/
 mkdir -p opkgfolder/usr/share/ofart/sounds/
+mkdir -p opkgfolder/usr/share/ofart/pixmaps/
 mkdir -p opkgfolder/usr/share/pixmaps/
 
 # Copy the script
 cp ofart opkgfolder/usr/bin/
+
+#copy glade ui
+cp ofart.glade opkgfolder/usr/share/ofart/
 
 # Copy .desktop
 cp oFart.desktop opkgfolder/usr/share/applications/
@@ -22,6 +26,9 @@ cp oFart.png opkgfolder/usr/share/pixmaps/
 
 # Copy sounds
 cp squeek.wav opkgfolder/usr/share/ofart/sounds/
+
+# Copy images
+cp whoopey.png opkgfolder/usr/share/ofart/pixmaps/
 
 # Copy control
 mkdir opkgfolder/CONTROL
