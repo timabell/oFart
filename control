@@ -1,0 +1,11 @@
+Package: ofart
+Description: Purile application
+Section: openmoko/audio
+Maintainer: Tim Abell <tim@timwise.co.uk>
+Architecture: armv4t
+OE: oFart
+Homepage: http://...
+Priority: optional
+Tags: group::audio
+Depends: python-html, python-pickle, python-netclient, python-pygtk
+Source: none
