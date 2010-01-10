@@ -21,10 +21,10 @@ class OFart:
 		self.window = self.wTree.get_widget("mainWindow")
 		if (self.window):
 			self.window.connect("destroy",  gtk.main_quit)
-		eventDic = { "on_image1_button_press_event" :  self.fart }
+		eventDic = { "on_eventbox1_button_press_event" :  self.fart }
 		self.wTree.signal_autoconnect(eventDic)
 
-	def fart(self):
+	def fart(self,  widget,  container):
 		#todo
 		print "parp"
 

@@ -5,7 +5,7 @@
 
 <widget class="GtkWindow" id="mainWindow">
   <property name="visible">True</property>
-  <property name="title" translatable="yes">window1</property>
+  <property name="title" translatable="yes">oFart</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
   <property name="modal">False</property>
@@ -20,14 +20,22 @@
   <property name="urgency_hint">False</property>
 
   <child>
-    <widget class="GtkImage" id="image1">
+    <widget class="GtkEventBox" id="eventbox1">
       <property name="visible">True</property>
-      <property name="pixbuf">whoopey.png</property>
-      <property name="xalign">0.5</property>
-      <property name="yalign">0.5</property>
-      <property name="xpad">0</property>
-      <property name="ypad">0</property>
-      <signal name="button_press_event" handler="on_image1_button_press_event" last_modification_time="Sun, 10 Jan 2010 20:56:19 GMT"/>
+      <property name="visible_window">True</property>
+      <property name="above_child">False</property>
+      <signal name="button_press_event" handler="on_eventbox1_button_press_event" last_modification_time="Sun, 10 Jan 2010 21:28:51 GMT"/>
+
+      <child>
+	<widget class="GtkImage" id="image1">
+	  <property name="visible">True</property>
+	  <property name="pixbuf">whoopey.png</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	</widget>
+      </child>
     </widget>
   </child>
 </widget>
