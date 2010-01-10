@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=oFart
+Comment=Purile application
+Exec=ofart
+Icon=oFart
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;
+StartupNotify=false
+Name[en_GB]=oFart
